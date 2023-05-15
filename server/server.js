@@ -36,6 +36,7 @@ let jokes = [
 // serve back static files
 app.use(express.static('server/public'));
 
+//route to get joke history
 app.get('/jokehistory', function(req, res) {
   console.log(jokes);
   res.send(jokes);
@@ -43,22 +44,11 @@ app.get('/jokehistory', function(req, res) {
 
 //route to post a new joke
 app.post('/jokehistory', function(req,res) {
-  //isolate the parts, store the final result
-  // let result=calculator(isolateParts(req.body.input1));
-  //store a string of the joke
-  // let joke=`${req.body.input1} = ${result}`
   //push the new joke into the history array
   jokes.push(req.body);
   // Send back a status code of 201
   res.sendStatus(201);
 });
-
-
-
-
-
-
-
 
 app.listen(PORT, () => {
   console.log('server running on: ', PORT);
