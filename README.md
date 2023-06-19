@@ -1,3 +1,5 @@
+In-class assessment: I had 90 minutes to complete this challenge. It was to demonstrate client/server skills developed over the week prior.
+
 ## Node Express jQuery Code Challenge
 
 To Install after cloning, run `npm install`
